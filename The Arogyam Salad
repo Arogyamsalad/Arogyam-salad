@@ -1,0 +1,114 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arogyam Salad</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4fff4;
+}
+header {
+  background: #0a5c2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+.tagline {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.container {
+  padding: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card h2 {
+  margin: 0;
+}
+.price {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.footer {
+  background: #0a5c2f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AROGYAM SALAD</h1>
+  <div class="tagline">Fresh & tasty vegetables in a perfectly balanced mix</div>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <h2>🥗 Veg Salad</h2>
+  <p>Fresh veggies mix</p>
+  <p class="price">₹99 (Daily)</p>
+  <button onclick="order()">Order Now</button>
+</div>
+
+<div class="card">
+  <h2>🧀 Paneer Protein Salad</h2>
+  <p>Paneer + veggies mix</p>
+  <p class="price">₹135 (Daily)</p>
+  <button onclick="order()">Order Now</button>
+</div>
+
+<div class="card">
+  <h2>🍗 Chicken Protein Salad</h2>
+  <p>Chicken + veggies mix</p>
+  <p class="price">₹149 (Daily)</p>
+  <button onclick="order()">Order Now</button>
+</div>
+
+<div class="card">
+  <h2>💪 High Protein Bowl</h2>
+  <p>Chicken/Paneer + premium veggies</p>
+  <p class="price">₹180 (Daily)</p>
+  <button onclick="order()">Order Now</button>
+</div>
+
+</div>
+
+<div class="footer">
+📍 Lane 60, Gokhle Nagar, Pune <br>
+📞 8806040158 / 7040250029
+</div>
+
+<script>
+function order(){
+  window.open("https://wa.me/918806040158","_blank");
+}
+</script>
+
+</body>
+</html>
