@@ -9,95 +9,93 @@ index.html
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap');
-        body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f4f8; }
         .hero-gradient { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
-        .card-shadow { transition: all 0.4s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.15); }
-        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; backdrop-filter: blur(8px); }
+        .card-shadow { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .card-shadow:hover { transform: scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; backdrop-filter: blur(10px); }
     </style>
 </head>
 <body>
 
-    <header class="hero-gradient text-white py-20 px-6 text-center shadow-2xl relative overflow-hidden">
+    <header class="hero-gradient text-white py-24 px-6 text-center shadow-2xl relative overflow-hidden">
         <div class="relative z-10">
-            <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter uppercase mb-4 drop-shadow-lg">Arogyam</h1>
-            <p class="text-xl md:text-2xl font-medium italic text-green-100 max-w-2xl mx-auto">Treat you and your loved one's with something healthy</p>
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter uppercase mb-4 drop-shadow-2xl">Arogyam</h1>
+            <p class="text-2xl md:text-3xl font-medium italic text-green-100 max-w-3xl mx-auto">Treat you and your loved one's with something healthy</p>
         </div>
-        <div class="absolute top-0 right-0 opacity-10 text-[18rem] font-black -mr-20 -mt-20 italic">HEALTH</div>
+        <div class="absolute top-0 right-0 opacity-10 text-[20rem] font-black -mr-20 -mt-20 italic">FRESH</div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-2 gap-16">
 
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
-                <div class="h-96 overflow-hidden relative bg-gray-200">
-                    <img src="veg.jpg" onerror="this.src='veg.jpg.jpg'" alt="Veg Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-green-500 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~168 CAL</span>
+            <div class="bg-white rounded-[3.5rem] overflow-hidden card-shadow flex flex-col group border border-white">
+                <div class="h-[30rem] overflow-hidden relative">
+                    <img src="veg.jpg" alt="Veg Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
+                    <span class="absolute top-10 left-10 bg-green-500 text-white px-8 py-3 rounded-full font-black italic shadow-2xl text-xl uppercase">Veg Special</span>
                 </div>
-                <div class="p-12 text-center">
-                    <h3 class="text-4xl font-black italic uppercase text-green-700 mb-6 tracking-tighter">1. Veg Salad</h3>
-                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
+                <div class="p-14 text-center">
+                    <h3 class="text-5xl font-black italic uppercase text-green-700 mb-6 tracking-tighter">1. Veg Salad</h3>
+                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Sprouts, Broccoli, Carrot, Bell Peppers, Corn & Fresh Veggies.</p>
+                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-black py-7 rounded-[2rem] shadow-2xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
-                <div class="h-96 overflow-hidden relative bg-gray-200">
-                    <img src="paneer.jpg" onerror="this.src='paneer.jpg.jpg'" alt="Paneer Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-blue-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~443 CAL</span>
+            <div class="bg-white rounded-[3.5rem] overflow-hidden card-shadow flex flex-col group border border-white">
+                <div class="h-[30rem] overflow-hidden relative">
+                    <img src="paneer.jpg" alt="Paneer Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
+                    <span class="absolute top-10 left-10 bg-blue-600 text-white px-8 py-3 rounded-full font-black italic shadow-2xl text-xl uppercase">High Protein</span>
                 </div>
-                <div class="p-12 text-center">
-                    <h3 class="text-4xl font-black italic uppercase text-blue-700 mb-6 tracking-tighter">2. Paneer Salad</h3>
-                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
-                <div class="h-96 overflow-hidden relative bg-gray-200">
-                    <img src="chicken.jpg" onerror="this.src='chicken.jpg.jpg'" alt="Chicken Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-red-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~269 CAL</span>
-                </div>
-                <div class="p-12 text-center">
-                    <h3 class="text-4xl font-black italic uppercase text-red-700 mb-6 tracking-tighter">3. Chicken Salad</h3>
-                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
+                <div class="p-14 text-center">
+                    <h3 class="text-5xl font-black italic uppercase text-blue-700 mb-6 tracking-tighter">2. Paneer Salad</h3>
+                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Fresh Paneer (100g) with Broccoli, Carrot, Sprouts & Corn.</p>
+                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-2xl font-black py-7 rounded-[2rem] shadow-2xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
-                <div class="h-96 overflow-hidden relative bg-gray-200">
-                    <img src="protein.jpg" onerror="this.src='protein.jpg.jpg'" alt="Protein Bowl" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-purple-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~356 CAL</span>
+            <div class="bg-white rounded-[3.5rem] overflow-hidden card-shadow flex flex-col group border border-white text-center">
+                <div class="h-[30rem] overflow-hidden relative">
+                    <img src="chicken.jpg" alt="Chicken Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
+                    <span class="absolute top-10 left-10 bg-red-600 text-white px-8 py-3 rounded-full font-black italic shadow-2xl text-xl uppercase">Lean Meat</span>
                 </div>
-                <div class="p-12 text-center">
-                    <h3 class="text-4xl font-black italic uppercase text-purple-700 mb-6 tracking-tighter">4. Protein Bowl</h3>
-                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Protein Bowl')" class="w-full bg-purple-600 hover:bg-purple-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
+                <div class="p-14">
+                    <h3 class="text-5xl font-black italic uppercase text-red-700 mb-6 tracking-tighter">3. Chicken Salad</h3>
+                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Grilled Chicken (100g), Lettuce, Broccoli, Corn & Sprouts.</p>
+                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 hover:bg-red-700 text-white text-2xl font-black py-7 rounded-[2rem] shadow-2xl transition-all uppercase tracking-widest">Order Now</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[3.5rem] overflow-hidden card-shadow flex flex-col group border border-white text-center">
+                <div class="h-[30rem] overflow-hidden relative">
+                    <img src="protein.jpg" alt="Protein Bowl" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
+                    <span class="absolute top-10 left-10 bg-purple-600 text-white px-8 py-3 rounded-full font-black italic shadow-2xl text-xl uppercase">Muscle Builder</span>
+                </div>
+                <div class="p-14">
+                    <h3 class="text-5xl font-black italic uppercase text-purple-700 mb-6 tracking-tighter">4. Protein Bowl</h3>
+                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Chicken (200g), Mushroom, Broccoli, Bell Paper & More.</p>
+                    <button onclick="openModal('Protein Bowl')" class="w-full bg-purple-600 hover:bg-purple-700 text-white text-2xl font-black py-7 rounded-[2rem] shadow-2xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
-        <h2 class="text-3xl font-black italic text-green-500 mb-6 uppercase tracking-widest">Arogyam Salad</h2>
-        <div class="flex flex-col gap-3 text-slate-400 mb-8">
-            <p><i class="fa fa-phone text-green-500 mr-2"></i> 8806040158 / 7040250029</p>
-            <p><i class="fa fa-location-dot text-green-500 mr-2"></i> Lane 60, Gokhale Nagar, Pune</p>
-        </div>
-        <p class="text-xs font-bold text-slate-600 tracking-[0.3em] uppercase">Eat Healthy, Stay Fit</p>
+    <footer class="bg-slate-900 text-white py-20 px-6 text-center">
+        <h2 class="text-4xl font-black italic text-green-500 mb-8 uppercase tracking-widest">Arogyam Salad</h2>
+        <p class="text-xl text-slate-400 mb-4">Pune: Gokhale Nagar, Lane 60</p>
+        <p class="text-2xl font-bold text-white mb-10">8806040158 / 7040250029</p>
+        <p class="text-sm font-bold text-slate-600 tracking-[0.5em] uppercase">Eat Clean • Train Mean • Get Lean</p>
     </footer>
 
     <div id="modal">
-        <div class="bg-white rounded-[3rem] p-12 max-w-md w-full mx-4 relative shadow-2xl scale-in-center">
-            <h3 class="text-3xl font-black text-center mb-8 uppercase italic">Choose Dressing</h3>
-            <div class="grid gap-4">
-                <button onclick="sendOrder('Creamy Curd')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">1. Creamy Curd</button>
-                <button onclick="sendOrder('Garlic Curd')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">2. Garlic Curd</button>
-                <button onclick="sendOrder('Mayonnaise')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">3. Mayonnaise</button>
+        <div class="bg-white rounded-[4rem] p-16 max-w-xl w-full mx-4 relative shadow-2xl scale-in-center">
+            <h3 class="text-5xl font-black text-center mb-12 uppercase italic tracking-tighter">Choose Dressing</h3>
+            <div class="grid gap-6">
+                <button onclick="sendOrder('Creamy Curd')" class="w-full py-8 px-10 border-4 border-slate-50 rounded-[2.5rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">1. Creamy Curd</button>
+                <button onclick="sendOrder('Garlic Curd')" class="w-full py-8 px-10 border-4 border-slate-100 rounded-[2.5rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">2. Garlic Curd</button>
+                <button onclick="sendOrder('Mayonnaise')" class="w-full py-8 px-10 border-4 border-slate-100 rounded-[2.5rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">3. Mayonnaise</button>
             </div>
-            <button onclick="closeModal()" class="mt-8 w-full text-slate-400 font-black uppercase text-xs tracking-widest">Cancel</button>
+            <button onclick="closeModal()" class="mt-12 w-full text-slate-400 font-black uppercase text-sm tracking-widest">Close Menu</button>
         </div>
     </div>
 
