@@ -16,7 +16,7 @@ index.html
 
     <header class="bg-green-600 text-white py-12 text-center shadow-lg">
         <h1 class="text-6xl font-black tracking-tighter uppercase italic">Arogyam Salad</h1>
-        <p class="mt-3 text-xl font-medium text-green-100 italic px-4">Fresh & tasty vegetables in a perfectly balanced mix for flavor and nutrition.</p>
+        <p class="mt-3 text-xl font-medium text-green-100 italic px-4">Treat you and your loved one's with something healthy</p>
     </header>
 
     <section class="max-w-6xl mx-auto px-4 py-16">
@@ -29,8 +29,8 @@ index.html
         <div class="grid lg:grid-cols-2 gap-10">
             
             <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-green-500 flex flex-col">
-                <div class="relative h-72 overflow-hidden">
-                    <img src="https://r.jina.ai/i/05e046a6-068b-4a57-abf5-46736d81da22" alt="Arogyam Veg Salad" class="w-full h-full object-cover">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="veg.jpg" onerror="this.src='veg.jpg.jpg'" alt="Arogyam Veg Salad" class="w-full h-full object-cover">
                     <div class="absolute top-4 left-4 bg-green-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~168 CAL</div>
                 </div>
                 <div class="p-8 flex-grow">
@@ -49,8 +49,8 @@ index.html
             </div>
 
             <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-blue-500 flex flex-col">
-                <div class="relative h-72 overflow-hidden">
-                    <img src="https://r.jina.ai/i/6c650117-7407-4222-9214-72b1a117b445" alt="Paneer Protein Salad" class="w-full h-full object-cover">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="paneer.jpg" onerror="this.src='paneer.jpg.jpg'" alt="Paneer Protein Salad" class="w-full h-full object-cover">
                     <div class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~443 CAL</div>
                 </div>
                 <div class="p-8 flex-grow">
@@ -69,8 +69,8 @@ index.html
             </div>
 
             <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-red-500 flex flex-col">
-                <div class="relative h-72 overflow-hidden">
-                    <img src="https://r.jina.ai/i/fbbbafd6-cfcf-4190-b941-413a9468b4fe" alt="Chicken Protein Salad" class="w-full h-full object-cover">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="chicken.jpg" onerror="this.src='chicken.jpg.jpg'" alt="Chicken Protein Salad" class="w-full h-full object-cover">
                     <div class="absolute top-4 left-4 bg-red-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~269 CAL</div>
                 </div>
                 <div class="p-8 flex-grow">
@@ -89,8 +89,8 @@ index.html
             </div>
 
             <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-purple-600 flex flex-col">
-                <div class="relative h-72 overflow-hidden">
-                    <img src="https://r.jina.ai/i/4462caeb-f32f-4886-90b5-6590b146445a" alt="High Protein Chicken Bowl" class="w-full h-full object-cover">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="protein.jpg" onerror="this.src='protein.jpg.jpg'" alt="High Protein Chicken Bowl" class="w-full h-full object-cover">
                     <div class="absolute top-4 left-4 bg-purple-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~356 CAL</div>
                 </div>
                 <div class="p-8 flex-grow">
@@ -165,8 +165,7 @@ index.html
         }
 
         function sendOrder(dressingName) {
-            const phone = "918806040158"; // Tumcha primary number
-            // Custom Message for WhatsApp
+            const phone = "918806040158";
             const message = `Hello Arogyam Salad! 🥗\n\nI want to order: *${currentSalad}*\nWith Dressing: *${dressingName}*\n\nPlease let me know the payment details!`;
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
