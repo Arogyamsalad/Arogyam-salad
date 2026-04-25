@@ -4,105 +4,53 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arogyam Salad - Healthy Meals</title>
+    <title>Arogyam Salad | Healthy & Fresh Pune</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .card-shadow { box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15); }
-        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 100; backdrop-filter: blur(8px); }
-        /* Image load hoyila vel lagla tar animation disel */
-        .img-container { background: #e5e7eb; position: relative; overflow: hidden; }
-        .img-container::after {
-            content: "Loading...";
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            font-size: 12px; color: #9ca3af; font-weight: bold;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,900&display=swap');
+        
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
+        .card-shadow { transition: all 0.4s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; backdrop-filter: blur(10px); }
+        
+        /* Premium Background Pattern */
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%3C057c3d' fill-opacity='0.03'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 0c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 37c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57 43c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM58 3c1.657 0 3-1.343 3-3S59.657-3 58-3s-3 1.343-3 3 1.343 3 3 3zM46 9c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm54 28c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 1c1.657 0 3-1.343 3-3S35.657-3 34-3s-3 1.343-3 3 1.343 3 3 3zm56 39c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM76 24c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM34 36c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM86 52c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM24 76c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM42 94c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM24 64c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-6-44c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm18 18c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-18-18c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-pattern text-slate-900">
 
-    <header class="bg-green-600 text-white py-16 text-center shadow-2xl">
-        <h1 class="text-6xl font-black tracking-tighter uppercase italic drop-shadow-md">Arogyam Salad</h1>
-        <p class="mt-4 text-xl font-medium text-green-100 italic px-6">Treat you and your loved one's with something healthy</p>
+    <header class="hero-gradient text-white py-24 px-6 text-center shadow-2xl relative overflow-hidden">
+        <div class="relative z-10">
+            <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 drop-shadow-lg">Arogyam</h1>
+            <p class="text-2xl md:text-3xl font-medium italic text-green-100 max-w-3xl mx-auto leading-relaxed">
+                <i class="fa fa-quote-left text-green-300 mr-2 opacity-50"></i>
+                Treat you and your loved one's with something healthy
+                <i class="fa fa-quote-right text-green-300 ml-2 opacity-50"></i>
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 opacity-10 text-[20rem] font-black -mr-20 -mt-20 italic">HEALTH</div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-4 py-20">
-        <div class="grid md:grid-cols-2 gap-12">
-            
-            <div class="bg-white rounded-[2.5rem] overflow-hidden card-shadow border border-gray-100 flex flex-col group">
-                <div class="relative h-80 img-container">
-                   <img src="veg.jpg" alt="Veg Salad" class="w-full h-full object-cover">
-                    <div class="absolute top-6 left-6 bg-green-600 text-white px-5 py-1.5 rounded-full font-bold shadow-lg italic z-20">~168 CAL</div>
+    <main class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-16">
+
+            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
+                <div class="h-96 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop" alt="Premium Veg Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-8 left-8 bg-green-500 text-white px-8 py-2.5 rounded-full font-black italic shadow-2xl text-lg">~168 CAL</span>
                 </div>
-                <div class="p-10 flex-grow text-center">
-                    <h3 class="text-3xl font-black text-green-700 mb-4 italic uppercase">1. VEG SALAD</h3>
-                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 text-white font-black py-5 rounded-2xl shadow-xl uppercase tracking-widest hover:bg-green-700 transition-all">Order Now</button>
+                <div class="p-14 text-center">
+                    <h3 class="text-5xl font-black italic uppercase text-green-700 mb-8 leading-none tracking-tighter">1. Veg Salad</h3>
+                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-black py-7 rounded-3xl shadow-2xl transition-all hover:shadow-green-200 active:scale-95 uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2.5rem] overflow-hidden card-shadow border border-gray-100 flex flex-col group text-center">
-                <div class="relative h-80 img-container">
-                   <img src="paneer.jpg" alt="Paneer Salad" class="w-full h-full object-cover">
-                    <div class="absolute top-6 left-6 bg-blue-600 text-white px-5 py-1.5 rounded-full font-bold shadow-lg italic z-20">~443 CAL</div>
-                </div>
-                <div class="p-10 flex-grow">
-                    <h3 class="text-3xl font-black text-blue-700 mb-4 italic uppercase">2. PANEER SALAD</h3>
-                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 text-white font-black py-5 rounded-2xl shadow-xl uppercase tracking-widest hover:bg-blue-700 transition-all">Order Now</button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[2.5rem] overflow-hidden card-shadow border border-gray-100 flex flex-col group text-center">
-                <div class="relative h-80 img-container">
-                    
-                    <div class="absolute top-6 left-6 bg-red-600 text-white px-5 py-1.5 rounded-full font-bold shadow-lg italic z-20">~269 CAL</div>
-                </div>
-                <div class="p-10 flex-grow">
-                    <h3 class="text-3xl font-black text-red-700 mb-4 italic uppercase leading-tight">3. CHICKEN SALAD</h3>
-                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 text-white font-black py-5 rounded-2xl shadow-xl uppercase tracking-widest hover:bg-red-700 transition-all">Order Now</button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[2.5rem] overflow-hidden card-shadow border border-gray-100 flex flex-col group text-center">
-                <div class="relative h-80 img-container">
-                    <img src="protein.jpg.jpg" onerror="this.src='protein.jpg'" loading="lazy" class="w-full h-full object-cover relative z-10">
-                    <div class="absolute top-6 left-6 bg-purple-600 text-white px-5 py-1.5 rounded-full font-bold shadow-lg italic z-20">~356 CAL</div>
-                </div>
-                <div class="p-10 flex-grow">
-                    <h3 class="text-3xl font-black text-purple-700 mb-4 italic uppercase leading-tight">4. PROTEIN BOWL</h3>
-                    <button onclick="openModal('High Protein Bowl')" class="w-full bg-purple-600 text-white font-black py-5 rounded-2xl shadow-xl uppercase tracking-widest hover:bg-purple-700 transition-all">Order Now</button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-16 text-center">
-        <h3 class="text-2xl font-black italic text-green-500 mb-4 tracking-widest">AROGYAM SALAD</h3>
-        <p class="text-gray-400">8806040158 / 7040250029</p>
-    </footer>
-
-    <div id="modal">
-        <div class="bg-white rounded-[3rem] p-12 max-w-md w-full mx-4 shadow-2xl relative text-center">
-            <h3 class="text-3xl font-black mb-8 uppercase tracking-tight">Select Dressing</h3>
-            <div class="space-y-4">
-                <button onclick="sendOrder('Creamy Curd')" class="w-full py-5 border-2 rounded-2xl font-bold hover:bg-green-50 transition-all">Creamy Curd</button>
-                <button onclick="sendOrder('Garlic Curd')" class="w-full py-5 border-2 rounded-2xl font-bold hover:bg-green-50 transition-all">Garlic Curd</button>
-                <button onclick="sendOrder('Mayonnaise')" class="w-full py-5 border-2 rounded-2xl font-bold hover:bg-green-50 transition-all">Mayonnaise</button>
-            </div>
-            <button onclick="closeModal()" class="mt-8 text-gray-400 font-bold uppercase text-xs tracking-widest">Cancel</button>
-        </div>
-    </div>
-
-    <script>
-        let currentSalad = '';
-        function openModal(name) { currentSalad = name; document.getElementById('modal').style.display = 'flex'; }
-        function closeModal() { document.getElementById('modal').style.display = 'none'; }
-        function sendOrder(dressing) {
-            const phone = "918806040158";
-            const msg = `*NEW ORDER*\nSalad: *${currentSalad}*\nDressing: *${dressing}*`;
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
-            closeModal();
-        }
-    </script>
-</body>
-</html>
+            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100 text-center">
+                <div class="h-96 overflow-hidden relative">
