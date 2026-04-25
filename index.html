@@ -49,24 +49,25 @@ header p {
 /* CARD */
 .card {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin: 20px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-/* TEXT */
 .left {
     display: flex;
-    align-items: center;
     gap: 15px;
+    align-items: center;
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .text h2 {
@@ -78,9 +79,10 @@ header p {
     font-weight: bold;
 }
 
+/* BUTTON */
 button {
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     color: white;
     cursor: pointer;
@@ -98,6 +100,32 @@ button {
 
 .purple { background:#f3e5f5; }
 .purple button { background:#6a1b9a; }
+
+/* PLANS */
+.plans {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.plans div {
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* CALORIES */
+.cal {
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
 
 /* FOOTER */
 footer {
@@ -126,11 +154,21 @@ footer {
 <div class="text">
 <h2>Veg Salad</h2>
 <p>Fresh veggies mix</p>
+<span class="cal">168 CAL</span>
+
+<div class="plans">
+<div>Daily<br><b>₹99</b></div>
+<div>Weekly<br><b>₹495</b></div>
+<div>Monthly<br><b>₹1980</b></div>
+</div>
+
 </div>
 </div>
+
 <div>
-<p class="price">₹99</p>
+<a href="https://wa.me/918806040158">
 <button>Order</button>
+</a>
 </div>
 </div>
 
@@ -141,11 +179,21 @@ footer {
 <div class="text">
 <h2>Paneer Protein Salad</h2>
 <p>Paneer + veggies</p>
+<span class="cal">443 CAL</span>
+
+<div class="plans">
+<div>₹135</div>
+<div>₹675</div>
+<div>₹2700</div>
+</div>
+
 </div>
 </div>
+
 <div>
-<p class="price">₹135</p>
+<a href="https://wa.me/918806040158">
 <button>Order</button>
+</a>
 </div>
 </div>
 
@@ -156,11 +204,21 @@ footer {
 <div class="text">
 <h2>Chicken Protein Salad</h2>
 <p>Chicken + veggies</p>
+<span class="cal">269 CAL</span>
+
+<div class="plans">
+<div>₹149</div>
+<div>₹745</div>
+<div>₹2980</div>
+</div>
+
 </div>
 </div>
+
 <div>
-<p class="price">₹149</p>
+<a href="https://wa.me/918806040158">
 <button>Order</button>
+</a>
 </div>
 </div>
 
@@ -171,11 +229,21 @@ footer {
 <div class="text">
 <h2>High Protein Bowl</h2>
 <p>Chicken/Paneer mix</p>
+<span class="cal">356 CAL</span>
+
+<div class="plans">
+<div>₹180</div>
+<div>₹900</div>
+<div>₹3600</div>
+</div>
+
 </div>
 </div>
+
 <div>
-<p class="price">₹180</p>
+<a href="https://wa.me/918806040158">
 <button>Order</button>
+</a>
 </div>
 </div>
 
