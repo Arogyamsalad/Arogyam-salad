@@ -1,134 +1,177 @@
 index.html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arogyam Salad - Pune | Order Online</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
     <style>
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        #modal {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.8);
-            z-index: 100;
-            backdrop-filter: blur(5px);
-        }
+        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 100; backdrop-filter: blur(5px); }
     </style>
 </head>
-
 <body class="bg-gray-50 font-sans text-gray-900">
 
-<header class="bg-green-600 text-white py-12 text-center shadow-lg">
-    <h1 class="text-6xl font-black uppercase italic">Arogyam Salad</h1>
-    <p class="mt-3 text-xl italic">Treat you and your loved one's with something healthy</p>
-</header>
+    <header class="bg-green-600 text-white py-12 text-center shadow-lg">
+        <h1 class="text-6xl font-black tracking-tighter uppercase italic">Arogyam Salad</h1>
+        <p class="mt-3 text-xl font-medium text-green-100 italic px-4">Treat you and your loved one's with something healthy</p>
+    </header>
 
-<section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-4xl text-center font-bold mb-12">Our Salad Plans</h2>
-
-    <div class="grid lg:grid-cols-2 gap-10">
-
-        <!-- VEG -->
-        <div class="bg-white rounded-3xl overflow-hidden card-shadow">
-            <div class="h-72">
-                <img src="images/veg.jpg" class="w-full h-full object-cover">
-            </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-bold text-green-700">Veg Salad</h3>
-                <p class="text-sm mt-2">Lettuce, Cabbage, Cucumber, Carrot, Sprouts</p>
-                <p class="mt-4 font-bold">₹99</p>
-                <button onclick="openModal('Veg Salad')" class="mt-4 w-full bg-green-600 text-white py-3 rounded-xl">Order</button>
-            </div>
+    <section class="max-w-6xl mx-auto px-4 py-16">
+        <div class="flex items-center justify-center gap-4 mb-12">
+            <div class="h-1 w-12 bg-green-500 rounded"></div>
+            <h2 class="text-4xl font-extrabold text-gray-800 uppercase tracking-tight">Our Salad Plans</h2>
+            <div class="h-1 w-12 bg-green-500 rounded"></div>
         </div>
+        
+        <div class="grid lg:grid-cols-2 gap-10">
+            
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-green-500 flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="veg.jpg" onerror="this.src='veg.jpg.jpg'" alt="Arogyam Veg Salad" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-green-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~168 CAL</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-3xl font-black text-green-700 mb-4 italic uppercase">1. VEG SALAD</h3>
+                    <div class="text-sm text-gray-700 leading-relaxed space-y-1 mb-6">
+                        <p class="font-bold">Ingredients:</p>
+                        <p class="italic">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center mb-8">
+                        <div class="bg-green-50 border border-green-100 p-3 rounded-2xl"> <p class="text-[10px] text-green-600 font-bold uppercase">Daily</p> <p class="text-xl font-black text-green-800">₹99</p> </div>
+                        <div class="bg-green-50 border border-green-100 p-3 rounded-2xl"> <p class="text-[10px] text-green-600 font-bold uppercase">Weekly</p> <p class="text-xl font-black text-green-800">₹495</p> </div>
+                        <div class="bg-green-50 border border-green-100 p-3 rounded-2xl"> <p class="text-[10px] text-green-600 font-bold uppercase">Monthly</p> <p class="text-xl font-black text-green-800">₹1980</p> </div>
+                    </div>
+                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white font-black py-4 rounded-2xl transition shadow-xl uppercase tracking-wider">Order Now</button>
+                </div>
+            </div>
 
-        <!-- PANEER -->
-        <div class="bg-white rounded-3xl overflow-hidden card-shadow">
-            <div class="h-72">
-                <img src="images/paneer.jpg" class="w-full h-full object-cover">
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-blue-500 flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="paneer.jpg" onerror="this.src='paneer.jpg.jpg'" alt="Paneer Protein Salad" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~443 CAL</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-3xl font-black text-blue-700 mb-4 italic uppercase">2. PANEER SALAD</h3>
+                    <div class="text-sm text-gray-700 leading-relaxed space-y-1 mb-6">
+                        <p class="font-bold">Ingredients:</p>
+                        <p class="italic">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center mb-8">
+                        <div class="bg-blue-50 border border-blue-100 p-3 rounded-2xl"> <p class="text-[10px] text-blue-600 font-bold uppercase">Daily</p> <p class="text-xl font-black text-blue-800">₹135</p> </div>
+                        <div class="bg-blue-50 border border-blue-100 p-3 rounded-2xl"> <p class="text-[10px] text-blue-600 font-bold uppercase">Weekly</p> <p class="text-xl font-black text-blue-800">₹675</p> </div>
+                        <div class="bg-blue-50 border border-blue-100 p-3 rounded-2xl"> <p class="text-[10px] text-blue-600 font-bold uppercase">Monthly</p> <p class="text-xl font-black text-blue-800">₹2700</p> </div>
+                    </div>
+                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-2xl transition shadow-xl uppercase tracking-wider">Order Now</button>
+                </div>
             </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-bold text-blue-700">Paneer Salad</h3>
-                <p class="text-sm mt-2">Paneer + Veggies</p>
-                <p class="mt-4 font-bold">₹135</p>
-                <button onclick="openModal('Paneer Salad')" class="mt-4 w-full bg-blue-600 text-white py-3 rounded-xl">Order</button>
+
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-red-500 flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="chicken.jpg" onerror="this.src='chicken.jpg.jpg'" alt="Chicken Protein Salad" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~269 CAL</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-3xl font-black text-red-700 mb-4 italic uppercase leading-tight">3. CHICKEN SALAD</h3>
+                    <div class="text-sm text-gray-700 leading-relaxed space-y-1 mb-6">
+                        <p class="font-bold">Ingredients:</p>
+                        <p class="italic">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center mb-8">
+                        <div class="bg-red-50 border border-red-100 p-3 rounded-2xl"> <p class="text-[10px] text-red-600 font-bold uppercase">Daily</p> <p class="text-xl font-black text-red-800">₹149</p> </div>
+                        <div class="bg-red-50 border border-red-100 p-3 rounded-2xl"> <p class="text-[10px] text-red-600 font-bold uppercase">Weekly</p> <p class="text-xl font-black text-red-800">₹745</p> </div>
+                        <div class="bg-red-50 border border-red-100 p-3 rounded-2xl"> <p class="text-[10px] text-red-600 font-bold uppercase">Monthly</p> <p class="text-xl font-black text-red-800">₹2980</p> </div>
+                    </div>
+                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 hover:bg-red-700 text-white font-black py-4 rounded-2xl transition shadow-xl uppercase tracking-wider">Order Now</button>
+                </div>
             </div>
+
+            <div class="bg-white rounded-[2rem] overflow-hidden card-shadow border-t-[12px] border-purple-600 flex flex-col">
+                <div class="relative h-72 overflow-hidden bg-gray-200">
+                    <img src="protein.jpg" onerror="this.src='protein.jpg.jpg'" alt="High Protein Chicken Bowl" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-purple-600 text-white px-4 py-1 rounded-full font-bold shadow-lg italic">~356 CAL</div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="text-3xl font-black text-purple-700 mb-4 italic uppercase leading-tight">4. PROTEIN BOWL</h3>
+                    <div class="text-sm text-gray-700 leading-relaxed space-y-1 mb-6">
+                        <p class="font-bold">Ingredients:</p>
+                        <p class="italic">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mashroom, Bell Paper, Baby Corn.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center mb-8">
+                        <div class="bg-purple-50 border border-purple-100 p-3 rounded-2xl"> <p class="text-[10px] text-purple-600 font-bold uppercase">Daily</p> <p class="text-xl font-black text-purple-800">₹180</p> </div>
+                        <div class="bg-purple-50 border border-purple-100 p-3 rounded-2xl"> <p class="text-[10px] text-purple-600 font-bold uppercase">Weekly</p> <p class="text-xl font-black text-purple-800">₹900</p> </div>
+                        <div class="bg-purple-50 border border-purple-100 p-3 rounded-2xl"> <p class="text-[10px] text-purple-600 font-bold uppercase">Monthly</p> <p class="text-xl font-black text-purple-800">₹3600</p> </div>
+                    </div>
+                    <button onclick="openModal('High Protein Bowl')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-black py-4 rounded-2xl transition shadow-xl uppercase tracking-wider">Order Now</button>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- CHICKEN -->
-        <div class="bg-white rounded-3xl overflow-hidden card-shadow">
-            <div class="h-72">
-                <img src="images/chicken.jpg" class="w-full h-full object-cover">
+    <footer class="bg-gray-900 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-black italic text-green-500 mb-6">AROGYAM SALAD</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-8 text-gray-400 mb-10">
+                <p><i class="fas fa-map-marker-alt text-green-500 mr-2"></i> Lane 60, Gokhle Nagar, Pune</p>
+                <p><i class="fas fa-phone text-green-500 mr-2"></i> 8806040158 / 7040250029</p>
             </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-bold text-red-700">Chicken Salad</h3>
-                <p class="text-sm mt-2">Chicken + Veggies</p>
-                <p class="mt-4 font-bold">₹149</p>
-                <button onclick="openModal('Chicken Salad')" class="mt-4 w-full bg-red-600 text-white py-3 rounded-xl">Order</button>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-green-400">Fruit Bowls</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-pink-400">Smoothies</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-blue-400">Detox Water</span>
             </div>
+            <p class="mt-12 text-sm italic text-gray-600 underline decoration-green-900">Eat Healthy, Stay Healthy, Live Healthy!</p>
         </div>
+    </footer>
 
-        <!-- PROTEIN -->
-        <div class="bg-white rounded-3xl overflow-hidden card-shadow">
-            <div class="h-72">
-                <img src="images/protein.jpg" class="w-full h-full object-cover">
+    <div id="modal">
+        <div class="bg-white rounded-[2.5rem] p-10 max-w-sm w-full mx-4 shadow-2xl relative">
+            <h3 class="text-2xl font-black text-gray-900 mb-2 text-center uppercase tracking-tight">Select Dressing</h3>
+            <p id="selectedSaladTitle" class="text-center text-green-600 font-bold mb-8 italic"></p>
+            
+            <div class="space-y-4">
+                <button onclick="sendOrder('Creamy Curd Dressing')" class="w-full py-4 px-6 border-2 border-gray-100 rounded-2xl hover:border-green-500 hover:bg-green-50 text-left flex items-center transition font-bold group">
+                    <span class="bg-green-100 text-green-600 h-8 w-8 rounded-full flex items-center justify-center mr-4 group-hover:bg-green-600 group-hover:text-white transition font-black">1</span>
+                    Creamy Curd
+                </button>
+                <button onclick="sendOrder('Garlic Curd Dressing')" class="w-full py-4 px-6 border-2 border-gray-100 rounded-2xl hover:border-green-500 hover:bg-green-50 text-left flex items-center transition font-bold group">
+                    <span class="bg-green-100 text-green-600 h-8 w-8 rounded-full flex items-center justify-center mr-4 group-hover:bg-green-600 group-hover:text-white transition font-black">2</span>
+                    Garlic Curd
+                </button>
+                <button onclick="sendOrder('Mayonnaise')" class="w-full py-4 px-6 border-2 border-gray-100 rounded-2xl hover:border-green-500 hover:bg-green-50 text-left flex items-center transition font-bold group">
+                    <span class="bg-green-100 text-green-600 h-8 w-8 rounded-full flex items-center justify-center mr-4 group-hover:bg-green-600 group-hover:text-white transition font-black">3</span>
+                    Mayonnaise
+                </button>
             </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-bold text-purple-700">Protein Bowl</h3>
-                <p class="text-sm mt-2">High Protein Chicken Bowl</p>
-                <p class="mt-4 font-bold">₹180</p>
-                <button onclick="openModal('Protein Bowl')" class="mt-4 w-full bg-purple-600 text-white py-3 rounded-xl">Order</button>
-            </div>
+            
+            <button onclick="closeModal()" class="mt-8 w-full text-gray-400 font-bold uppercase text-xs tracking-widest hover:text-red-500 transition">Cancel</button>
         </div>
-
     </div>
-</section>
 
-<!-- MODAL -->
-<div id="modal">
-    <div class="bg-white p-8 rounded-3xl max-w-sm w-full text-center">
-        <h3 class="text-xl font-bold mb-4">Select Dressing</h3>
-        <p id="saladName" class="mb-4 text-green-600 font-bold"></p>
+    <script>
+        let currentSalad = '';
 
-        <button onclick="order('Curd')" class="block w-full bg-green-100 p-3 mb-2 rounded-xl">Curd</button>
-        <button onclick="order('Garlic')" class="block w-full bg-green-100 p-3 mb-2 rounded-xl">Garlic</button>
-        <button onclick="order('Mayo')" class="block w-full bg-green-100 p-3 rounded-xl">Mayo</button>
+        function openModal(saladName) {
+            currentSalad = saladName;
+            document.getElementById('selectedSaladTitle').innerText = saladName;
+            document.getElementById('modal').style.display = 'flex';
+        }
 
-        <button onclick="closeModal()" class="mt-4 text-red-500">Cancel</button>
-    </div>
-</div>
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-<script>
-let selected = "";
-
-function openModal(name){
-    selected = name;
-    document.getElementById("saladName").innerText = name;
-    document.getElementById("modal").style.display = "flex";
-}
-
-function closeModal(){
-    document.getElementById("modal").style.display = "none";
-}
-
-function order(dressing){
-    let msg = `Hello, I want ${selected} with ${dressing}`;
-    window.open(`https://wa.me/918806040158?text=${encodeURIComponent(msg)}`);
-}
-</script>
+        function sendOrder(dressingName) {
+            const phone = "918806040158";
+            const message = `Hello Arogyam Salad! 🥗\n\nI want to order: *${currentSalad}*\nWith Dressing: *${dressingName}*\n\nPlease let me know the payment details!`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+            closeModal();
+        }
+    </script>
 
 </body>
-</html>Arogyam-salad/
-│
-├── index.html
-├── veg.jpg
-├── paneer.jpg
-├── chicken.jpg
-├── protein.jpg
+</html>
