@@ -5,127 +5,161 @@ index.html
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arogyam Salad</title>
+
 <style>
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
- background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fff5;
 }
-   header {
-    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 50px 20px;
-    border-radius: 0 0 25px 25px;
-}
-    color: #1b5e20;
+
+/* HEADER */
+header {
+    background: white;
     text-align: center;
     padding: 30px 20px;
-    border-radius: 0 0 20px 20px;
 }
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-h1 {
-    font-size: 40px;
+
+header h1 {
+    font-size: 42px;
+    margin: 0;
     color: #1b5e20;
+}
+
+header span {
+    color: #66bb6a;
+}
+
+header p {
+    margin-top: 10px;
+    color: #444;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
     font-weight: bold;
-  font-size: 40px;
-  header p {
-    font-size: 18px;
-    color: #2e7d32;
+    background: #1b5e20;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
 }
-.tagline {
-  font-size: 16px;
-  margin-top: 5px;
-}
-.container {
-  padding: 20px;
-}
+
+/* CARD */
 .card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.card h2 {
-  margin: 0;
+
+.left {
+    max-width: 60%;
 }
+
+.left h2 {
+    margin: 0;
+}
+
 .price {
-  color: green;
-  font-weight: bold;
-  font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
 }
+
 button {
-  background: #25D366;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
 }
-.footer {
-  background: #0a5c2f;
-  color: white;
-  text-align: center;
-  padding: 15px;
+
+/* COLORS */
+.green { border-left: 8px solid green; }
+.blue { border-left: 8px solid blue; }
+.red { border-left: 8px solid red; }
+.purple { border-left: 8px solid purple; }
+
+/* FOOTER */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>AROGYAM SALAD</h1>
-  <div class="tagline">Fresh & tasty vegetables in a perfectly balanced mix</div>
+    <h1>AROGYAM <span>SALAD</span></h1>
+    <p>Fresh & tasty vegetables in a perfectly balanced mix</p>
 </header>
 
-<div class="container">
+<div class="section-title">OUR SALAD PLANS</div>
 
-<div class="card">
-  <h2>🥗 Veg Salad</h2>
-  <p>Fresh veggies mix</p>
-  <p class="price">₹99 (Daily)</p>
-  <button onclick="order()">Order Now</button>
+<!-- Veg -->
+<div class="card green">
+    <div class="left">
+        <h2>Veg Salad</h2>
+        <p>Fresh veggies mix</p>
+    </div>
+    <div>
+        <p class="price">₹99</p>
+        <button>Order Now</button>
+    </div>
 </div>
 
-<div class="card">
-  <h2>🧀 Paneer Protein Salad</h2>
-  <p>Paneer + veggies mix</p>
-  <p class="price">₹135 (Daily)</p>
-  <button onclick="order()">Order Now</button>
+<!-- Paneer -->
+<div class="card blue">
+    <div class="left">
+        <h2>Paneer Protein Salad</h2>
+        <p>Paneer + veggies mix</p>
+    </div>
+    <div>
+        <p class="price">₹135</p>
+        <button>Order Now</button>
+    </div>
 </div>
 
-<div class="card">
-  <h2>🍗 Chicken Protein Salad</h2>
-  <p>Chicken + veggies mix</p>
-  <p class="price">₹149 (Daily)</p>
-  <button onclick="order()">Order Now</button>
+<!-- Chicken -->
+<div class="card red">
+    <div class="left">
+        <h2>Chicken Protein Salad</h2>
+        <p>Chicken + veggies mix</p>
+    </div>
+    <div>
+        <p class="price">₹149</p>
+        <button>Order Now</button>
+    </div>
 </div>
 
-<div class="card">
-  <h2>💪 High Protein Bowl</h2>
-  <p>Chicken/Paneer + premium veggies</p>
-  <p class="price">₹180 (Daily)</p>
-  <button onclick="order()">Order Now</button>
+<!-- High Protein -->
+<div class="card purple">
+    <div class="left">
+        <h2>High Protein Bowl</h2>
+        <p>Chicken/Paneer + veggies</p>
+    </div>
+    <div>
+        <p class="price">₹180</p>
+        <button>Order Now</button>
+    </div>
 </div>
 
-</div>
-
-<div class="footer">
-📍 Lane 60, Gokhle Nagar, Pune <br>
-📞 8806040158 / 7040250029
-</div>
-
-<script>
-function order(){
-  window.open("https://wa.me/918806040158","_blank");
-}
-</script>
+<footer>
+    📍 Lane 60, Gokhle Nagar, Pune <br>
+    📞 8806040158 / 7040250029
+</footer>
 
 </body>
 </html>
