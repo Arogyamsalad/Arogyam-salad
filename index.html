@@ -4,120 +4,100 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arogyam Salad | Healthy & Fresh Pune</title>
+    <title>Arogyam Salad | Healthy & Fresh</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,900&display=swap');
-        
-        body { font-family: 'Poppins', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; }
         .hero-gradient { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
-        .card-shadow { transition: all 0.4s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; backdrop-filter: blur(10px); }
-        
-        /* Premium Background Pattern */
-        .bg-pattern {
-            background-color: #f8fafc;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%3C057c3d' fill-opacity='0.03'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 0c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 37c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57 43c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM58 3c1.657 0 3-1.343 3-3S59.657-3 58-3s-3 1.343-3 3 1.343 3 3 3zM46 9c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm54 28c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 1c1.657 0 3-1.343 3-3S35.657-3 34-3s-3 1.343-3 3 1.343 3 3 3zm56 39c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM76 24c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM34 36c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM86 52c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM24 76c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM42 94c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM24 64c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-6-44c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm18 18c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm0 24c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-18-18c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm36-6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-12-12c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
+        .card-shadow { transition: all 0.4s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.15); }
+        #modal { display: none; align-items: center; justify-content: center; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; backdrop-filter: blur(8px); }
     </style>
 </head>
-<body class="bg-pattern text-slate-900">
+<body>
 
-    <header class="hero-gradient text-white py-24 px-6 text-center shadow-2xl relative overflow-hidden">
+    <header class="hero-gradient text-white py-20 px-6 text-center shadow-2xl relative overflow-hidden">
         <div class="relative z-10">
-            <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 drop-shadow-lg">Arogyam</h1>
-            <p class="text-2xl md:text-3xl font-medium italic text-green-100 max-w-3xl mx-auto leading-relaxed">
-                <i class="fa fa-quote-left text-green-300 mr-2 opacity-50"></i>
-                Treat you and your loved one's with something healthy
-                <i class="fa fa-quote-right text-green-300 ml-2 opacity-50"></i>
-            </p>
+            <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter uppercase mb-4 drop-shadow-lg">Arogyam</h1>
+            <p class="text-xl md:text-2xl font-medium italic text-green-100 max-w-2xl mx-auto">Treat you and your loved one's with something healthy</p>
         </div>
-        <div class="absolute top-0 right-0 opacity-10 text-[20rem] font-black -mr-20 -mt-20 italic">HEALTH</div>
+        <div class="absolute top-0 right-0 opacity-10 text-[18rem] font-black -mr-20 -mt-20 italic">HEALTH</div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-2 gap-16">
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12">
 
             <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
-                <div class="h-96 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop" alt="Premium Veg Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-green-500 text-white px-8 py-2.5 rounded-full font-black italic shadow-2xl text-lg">~168 CAL</span>
+                <div class="h-96 overflow-hidden relative bg-gray-200">
+                    <img src="veg.jpg" onerror="this.src='veg.jpg.jpg'" alt="Veg Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-8 left-8 bg-green-500 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~168 CAL</span>
                 </div>
-                <div class="p-14 text-center">
-                    <h3 class="text-5xl font-black italic uppercase text-green-700 mb-8 leading-none tracking-tighter">1. Veg Salad</h3>
-                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-black py-7 rounded-3xl shadow-2xl transition-all hover:shadow-green-200 active:scale-95 uppercase tracking-widest">Order Now</button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100 text-center">
-                <div class="h-96 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1611082191599-566f103b446a?q=80&w=1000&auto=format&fit=crop" alt="Paneer Salad Bowl" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-blue-600 text-white px-8 py-2.5 rounded-full font-black italic shadow-2xl text-lg">~443 CAL</span>
-                </div>
-                <div class="p-14">
-                    <h3 class="text-5xl font-black italic uppercase text-blue-700 mb-8 leading-none tracking-tighter">2. Paneer Salad</h3>
-                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-2xl font-black py-7 rounded-3xl shadow-2xl transition-all hover:shadow-blue-200 active:scale-95 uppercase tracking-widest">Order Now</button>
+                <div class="p-12 text-center">
+                    <h3 class="text-4xl font-black italic uppercase text-green-700 mb-6 tracking-tighter">1. Veg Salad</h3>
+                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    <button onclick="openModal('Veg Salad')" class="w-full bg-green-600 hover:bg-green-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100 text-center">
-                <div class="h-96 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1000&auto=format&fit=crop" alt="Grilled Chicken Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-red-600 text-white px-8 py-2.5 rounded-full font-black italic shadow-2xl text-lg">~269 CAL</span>
+            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
+                <div class="h-96 overflow-hidden relative bg-gray-200">
+                    <img src="paneer.jpg" onerror="this.src='paneer.jpg.jpg'" alt="Paneer Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-8 left-8 bg-blue-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~443 CAL</span>
                 </div>
-                <div class="p-14">
-                    <h3 class="text-5xl font-black italic uppercase text-red-700 mb-8 leading-none tracking-tighter">3. Chicken Salad</h3>
-                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 hover:bg-red-700 text-white text-2xl font-black py-7 rounded-3xl shadow-2xl transition-all hover:shadow-red-200 active:scale-95 uppercase tracking-widest">Order Now</button>
+                <div class="p-12 text-center">
+                    <h3 class="text-4xl font-black italic uppercase text-blue-700 mb-6 tracking-tighter">2. Paneer Salad</h3>
+                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    <button onclick="openModal('Paneer Salad')" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100 text-center">
-                <div class="h-96 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop" alt="High Protein Salad Bowl" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <span class="absolute top-8 left-8 bg-purple-600 text-white px-8 py-2.5 rounded-full font-black italic shadow-2xl text-lg">~356 CAL</span>
+            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
+                <div class="h-96 overflow-hidden relative bg-gray-200">
+                    <img src="chicken.jpg" onerror="this.src='chicken.jpg.jpg'" alt="Chicken Salad" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-8 left-8 bg-red-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~269 CAL</span>
                 </div>
-                <div class="p-14">
-                    <h3 class="text-5xl font-black italic uppercase text-purple-700 mb-8 leading-none tracking-tighter">4. Protein Bowl</h3>
-                    <p class="text-slate-500 italic text-xl mb-12 leading-relaxed">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper, Baby Corn.</p>
-                    <button onclick="openModal('Protein Bowl')" class="w-full bg-purple-600 hover:bg-purple-700 text-white text-2xl font-black py-7 rounded-3xl shadow-2xl transition-all hover:shadow-purple-200 active:scale-95 uppercase tracking-widest">Order Now</button>
+                <div class="p-12 text-center">
+                    <h3 class="text-4xl font-black italic uppercase text-red-700 mb-6 tracking-tighter">3. Chicken Salad</h3>
+                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    <button onclick="openModal('Chicken Salad')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[3rem] overflow-hidden card-shadow flex flex-col group border border-slate-100">
+                <div class="h-96 overflow-hidden relative bg-gray-200">
+                    <img src="protein.jpg" onerror="this.src='protein.jpg.jpg'" alt="Protein Bowl" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <span class="absolute top-8 left-8 bg-purple-600 text-white px-6 py-2 rounded-full font-black italic shadow-xl">~356 CAL</span>
+                </div>
+                <div class="p-12 text-center">
+                    <h3 class="text-4xl font-black italic uppercase text-purple-700 mb-6 tracking-tighter">4. Protein Bowl</h3>
+                    <p class="text-slate-500 italic text-lg mb-10 leading-relaxed italic">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper, Baby Corn.</p>
+                    <button onclick="openModal('Protein Bowl')" class="w-full bg-purple-600 hover:bg-purple-700 text-white text-xl font-black py-6 rounded-3xl shadow-xl transition-all uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-white py-24 px-6 text-center shadow-inner">
-        <h2 class="text-4xl font-black italic text-green-500 mb-10 uppercase tracking-widest">Arogyam Salad</h2>
-        <div class="flex flex-wrap justify-center gap-12 mb-16 text-slate-400 text-lg">
-            <p><i class="fa fa-phone text-green-500 mr-3 text-2xl"></i> 8806040158 / 7040250029</p>
-            <p><i class="fa fa-location-dot text-green-500 mr-3 text-2xl"></i> Lane 60, Gokhale Nagar, Pune</p>
+    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+        <h2 class="text-3xl font-black italic text-green-500 mb-6 uppercase tracking-widest">Arogyam Salad</h2>
+        <div class="flex flex-col gap-3 text-slate-400 mb-8">
+            <p><i class="fa fa-phone text-green-500 mr-2"></i> 8806040158 / 7040250029</p>
+            <p><i class="fa fa-location-dot text-green-500 mr-2"></i> Lane 60, Gokhale Nagar, Pune</p>
         </div>
-        <p class="text-sm font-bold text-slate-600 tracking-[0.3em] uppercase">Eat Healthy, Stay Fit, Live Better</p>
+        <p class="text-xs font-bold text-slate-600 tracking-[0.3em] uppercase">Eat Healthy, Stay Fit</p>
     </footer>
 
     <div id="modal">
-        <div class="bg-white rounded-[3.5rem] p-20 max-w-xl w-full mx-4 relative shadow-2xl scale-in-center">
-            <h3 class="text-5xl font-black text-center mb-12 uppercase italic tracking-tighter">Choose Dressing</h3>
-            <div class="grid gap-8">
-                <button onclick="sendOrder('Creamy Curd Dressing')" class="w-full py-7 px-12 border-4 border-slate-100 rounded-[2rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left flex items-center">
-                    <span class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mr-6 font-bold">1</span>
-                    Creamy Curd
-                </button>
-                <button onclick="sendOrder('Garlic Curd Dressing')" class="w-full py-7 px-12 border-4 border-slate-100 rounded-[2rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left flex items-center">
-                    <span class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mr-6 font-bold">2</span>
-                    Garlic Curd
-                </button>
-                <button onclick="sendOrder('Mayonnaise')" class="w-full py-7 px-12 border-4 border-slate-100 rounded-[2rem] text-3xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left flex items-center">
-                    <span class="bg-green-100 text-green-600 h-12 w-12 rounded-full flex items-center justify-center mr-6 font-bold">3</span>
-                    Mayonnaise
-                </button>
+        <div class="bg-white rounded-[3rem] p-12 max-w-md w-full mx-4 relative shadow-2xl scale-in-center">
+            <h3 class="text-3xl font-black text-center mb-8 uppercase italic">Choose Dressing</h3>
+            <div class="grid gap-4">
+                <button onclick="sendOrder('Creamy Curd')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">1. Creamy Curd</button>
+                <button onclick="sendOrder('Garlic Curd')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">2. Garlic Curd</button>
+                <button onclick="sendOrder('Mayonnaise')" class="w-full py-5 px-8 border-2 border-slate-100 rounded-2xl text-xl font-black hover:border-green-500 hover:bg-green-50 transition-all text-left">3. Mayonnaise</button>
             </div>
-            <button onclick="closeModal()" class="mt-14 w-full text-slate-400 font-black uppercase text-base tracking-widest hover:text-red-500 transition">Cancel Order</button>
+            <button onclick="closeModal()" class="mt-8 w-full text-slate-400 font-black uppercase text-xs tracking-widest">Cancel</button>
         </div>
     </div>
 
@@ -125,10 +105,9 @@ index.html
         let selectedProduct = '';
         function openModal(name) { selectedProduct = name; document.getElementById('modal').style.display = 'flex'; }
         function closeModal() { document.getElementById('modal').style.display = 'none'; }
-        
         function sendOrder(dressing) {
             const phone = "918806040158";
-            const text = `*New Salad Order!* 🥗\n----------------------\n*Item:* ${selectedProduct}\n*Dressing:* ${dressing}\n----------------------\nPlease confirm!`;
+            const text = `*New Salad Order!* 🥗\n*Item:* ${selectedProduct}\n*Dressing:* ${dressing}`;
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
             closeModal();
         }
