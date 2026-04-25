@@ -15,13 +15,13 @@ body {
 
 /* HEADER */
 header {
-    background: white;
+    background: linear-gradient(135deg,#e8f5e9,#c8e6c9);
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px;
 }
 
 header h1 {
-    font-size: 42px;
+    font-size: 45px;
     margin: 0;
     color: #1b5e20;
 }
@@ -35,80 +35,76 @@ header p {
     color: #444;
 }
 
-/* SECTION TITLE */
+/* TITLE */
 .section-title {
     text-align: center;
-    font-weight: bold;
     background: #1b5e20;
     color: white;
     padding: 10px;
     margin: 20px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 /* CARD */
 .card {
-    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 20px;
     padding: 20px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.left {
-    max-width: 60%;
+.card img {
+    width: 100px;
+    border-radius: 50%;
 }
 
-.left h2 {
+/* TEXT */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.text h2 {
     margin: 0;
 }
 
 .price {
     font-size: 22px;
     font-weight: bold;
-    color: green;
 }
 
 button {
-    background: #2e7d32;
-    color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    color: white;
     cursor: pointer;
 }
 
 /* COLORS */
-.green {
-    background: #e8f5e9;
-    border-left: 10px solid #2e7d32;
-}
+.green { background:#e8f5e9; }
+.green button { background:#2e7d32; }
 
-.blue {
-    background: #e3f2fd;
-    border-left: 10px solid #1565c0;
-}
+.blue { background:#e3f2fd; }
+.blue button { background:#1565c0; }
 
-.red {
-    background: #ffebee;
-    border-left: 10px solid #c62828;
-}
+.red { background:#ffebee; }
+.red button { background:#c62828; }
 
-.purple {
-    background: #f3e5f5;
-    border-left: 10px solid #6a1b9a;
-}
+.purple { background:#f3e5f5; }
+.purple button { background:#6a1b9a; }
 
 /* FOOTER */
 footer {
-    background: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 </style>
 
@@ -117,63 +113,74 @@ footer {
 <body>
 
 <header>
-    <h1>AROGYAM <span>SALAD</span></h1>
-    <p>Fresh & tasty vegetables in a perfectly balanced mix</p>
+<h1>AROGYAM <span>SALAD</span></h1>
+<p>Fresh & tasty vegetables in a perfectly balanced mix</p>
 </header>
 
 <div class="section-title">OUR SALAD PLANS</div>
 
 <!-- Veg -->
 <div class="card green">
-    <div class="left">
-        <h2>Veg Salad</h2>
-        <p>Fresh veggies mix</p>
-    </div>
-    <div>
-        <p class="price">₹99</p>
-        <button>Order Now</button>
-    </div>
+<div class="left">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+<div class="text">
+<h2>Veg Salad</h2>
+<p>Fresh veggies mix</p>
+</div>
+</div>
+<div>
+<p class="price">₹99</p>
+<button>Order</button>
+</div>
 </div>
 
 <!-- Paneer -->
 <div class="card blue">
-    <div class="left">
-        <h2>Paneer Protein Salad</h2>
-        <p>Paneer + veggies mix</p>
-    </div>
-    <div>
-        <p class="price">₹135</p>
-        <button>Order Now</button>
-    </div>
+<div class="left">
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+<div class="text">
+<h2>Paneer Protein Salad</h2>
+<p>Paneer + veggies</p>
+</div>
+</div>
+<div>
+<p class="price">₹135</p>
+<button>Order</button>
+</div>
 </div>
 
 <!-- Chicken -->
 <div class="card red">
-    <div class="left">
-        <h2>Chicken Protein Salad</h2>
-        <p>Chicken + veggies mix</p>
-    </div>
-    <div>
-        <p class="price">₹149</p>
-        <button>Order Now</button>
-    </div>
+<div class="left">
+<img src="https://images.unsplash.com/photo-1604908177522-402c6c6f0c8e">
+<div class="text">
+<h2>Chicken Protein Salad</h2>
+<p>Chicken + veggies</p>
+</div>
+</div>
+<div>
+<p class="price">₹149</p>
+<button>Order</button>
+</div>
 </div>
 
 <!-- High Protein -->
 <div class="card purple">
-    <div class="left">
-        <h2>High Protein Bowl</h2>
-        <p>Chicken/Paneer + veggies</p>
-    </div>
-    <div>
-        <p class="price">₹180</p>
-        <button>Order Now</button>
-    </div>
+<div class="left">
+<img src="https://images.unsplash.com/photo-1543332164-6e82f355bad7">
+<div class="text">
+<h2>High Protein Bowl</h2>
+<p>Chicken/Paneer mix</p>
+</div>
+</div>
+<div>
+<p class="price">₹180</p>
+<button>Order</button>
+</div>
 </div>
 
 <footer>
-    📍 Lane 60, Gokhle Nagar, Pune <br>
-    📞 8806040158 / 7040250029
+📍 Pune | 📞 8806040158 / 7040250029
 </footer>
 
 </body>
