@@ -4,13 +4,13 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arogyam | Premium Health Kitchen</title>
+    <title>Arogyam Salad | Premium Health Kitchen</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
         
-        body { font-family: 'Outfit', sans-serif; background-color: #0f172a; color: white; }
+        body { font-family: 'Outfit', sans-serif; background-color: #0f172a; color: white; scroll-behavior: smooth; }
         
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
@@ -38,6 +38,16 @@ index.html
             justify-content: center;
         }
 
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 2rem;
+            border-left: 8px solid #22c55e;
+            padding-left: 1.5rem;
+        }
+
         /* Hero Animation */
         .fade-in { animation: fadeIn 1.5s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -45,101 +55,154 @@ index.html
 </head>
 <body class="pb-20">
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-3xl font-black italic tracking-widest text-green-500">AROGYAM</div>
-        <div class="hidden md:flex space-x-8 font-medium text-slate-400">
-            <a href="#" class="hover:text-white transition">Menu</a>
-            <a href="#" class="hover:text-white transition">About</a>
-            <a href="#" class="hover:text-white transition">Contact</a>
+    <nav class="p-6 sticky top-0 z-50 glass-card flex justify-between items-center max-w-7xl mx-auto rounded-b-3xl">
+        <div class="text-3xl font-black italic tracking-tighter text-green-500">AROGYAM SALAD</div>
+        <div class="hidden md:flex space-x-8 font-bold uppercase text-xs tracking-widest text-slate-400">
+            <a href="#menu" class="hover:text-white transition">Menu</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
         </div>
     </nav>
 
-    <section class="py-20 px-6 text-center fade-in">
-        <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
-            EAT CLEAN <br> <span class="premium-text">LIVE BETTER</span>
+    <section class="py-32 px-6 text-center fade-in">
+        <h1 class="text-7xl md:text-[10rem] font-black mb-8 leading-none tracking-tighter italic">
+            AROGYAM <br> <span class="premium-text">SALAD</span>
         </h1>
-        <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-light">
-            Treat you and your loved one's with something healthy. 
-            Fresh ingredients, premium taste.
+        <p class="text-xl md:text-3xl text-slate-400 max-w-3xl mx-auto font-light italic">
+            "Treat you and your loved one's with something healthy"
         </p>
+        <div class="mt-12">
+            <a href="#menu" class="bg-green-600 hover:bg-green-500 text-white px-12 py-5 rounded-full font-black text-xl transition-all shadow-2xl shadow-green-500/20">VIEW MENU</a>
+        </div>
     </section>
 
-    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="section-title">Our <span class="text-green-500">Menu</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
-            <div class="h-80 image-placeholder relative">
-                <img src="veg.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
-                    <i class="fa-solid fa-leaf text-6xl"></i>
+            <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                <div class="h-80 image-placeholder relative">
+                    <img src="veg.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                        <i class="fa-solid fa-leaf text-6xl text-green-500"></i>
+                        <p class="mt-4 font-bold">VEG SPECIAL</p>
+                    </div>
+                </div>
+                <div class="p-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-4xl font-bold uppercase italic">Veg Salad</h3>
+                        <span class="text-green-500 font-bold border border-green-500/30 px-4 py-1 rounded-full text-sm">~168 CAL</span>
+                    </div>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                    <button onclick="order('Veg Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-green-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
                 </div>
             </div>
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-4xl font-bold uppercase italic">Veg Salad</h3>
-                    <span class="text-green-500 font-bold border border-green-500/30 px-4 py-1 rounded-full text-sm">~168 CAL</span>
+
+            <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                <div class="h-80 image-placeholder relative">
+                    <img src="paneer.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                        <i class="fa-solid fa-cheese text-6xl text-blue-500"></i>
+                        <p class="mt-4 font-bold">PANEER LOVE</p>
+                    </div>
                 </div>
-                <p class="text-slate-400 mb-8 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                <button onclick="order('Veg Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-green-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+                <div class="p-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-4xl font-bold uppercase italic">Paneer Salad</h3>
+                        <span class="text-blue-500 font-bold border border-blue-500/30 px-4 py-1 rounded-full text-sm">~443 CAL</span>
+                    </div>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
+                    <button onclick="order('Paneer Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                <div class="h-80 image-placeholder relative">
+                    <img src="chicken.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                        <i class="fa-solid fa-drumstick-bite text-6xl text-red-500"></i>
+                        <p class="mt-4 font-bold">CHICKEN FEAST</p>
+                    </div>
+                </div>
+                <div class="p-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-4xl font-bold uppercase italic">Chicken Salad</h3>
+                        <span class="text-red-500 font-bold border border-red-500/30 px-4 py-1 rounded-full text-sm">~269 CAL</span>
+                    </div>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
+                    <button onclick="order('Chicken Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-red-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+                <div class="h-80 image-placeholder relative">
+                    <img src="protein.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                        <i class="fa-solid fa-dumbbell text-6xl text-purple-500"></i>
+                        <p class="mt-4 font-bold">GYM BOWL</p>
+                    </div>
+                </div>
+                <div class="p-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-4xl font-bold uppercase italic">Protein Bowl</h3>
+                        <span class="text-purple-500 font-bold border border-purple-500/30 px-4 py-1 rounded-full text-sm">~356 CAL</span>
+                    </div>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper.</p>
+                    <button onclick="order('Protein Bowl')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-purple-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
-            <div class="h-80 image-placeholder relative">
-                <img src="paneer.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
-                    <i class="fa-solid fa-cheese text-6xl"></i>
+    <section id="about" class="max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <h2 class="section-title text-blue-500">About <span class="text-white">Us</span></h2>
+        <div class="glass-card p-12 rounded-[3rem]">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-2xl text-slate-300 leading-relaxed italic mb-6">
+                        Arogyam Salad madhe aamhi fakt salad nahi, tar ek "Healthy Lifestyle" serve karto. 
+                    </p>
+                    <p class="text-slate-400 text-lg">
+                        Gokhale Nagar chya heart madhe located, aamhi fresh aani premium quality ingredients vaprun tumchya fitness journey la madat karto. Gym lover aso kiwa health conscious, pratyekasathi aamchyakade special bowl aahe.
+                    </p>
                 </div>
-            </div>
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-4xl font-bold uppercase italic">Paneer Salad</h3>
-                    <span class="text-blue-500 font-bold border border-blue-500/30 px-4 py-1 rounded-full text-sm">~443 CAL</span>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-green-500/10 p-8 rounded-3xl text-center">
+                        <h4 class="text-4xl font-black text-green-500">100%</h4>
+                        <p class="text-xs uppercase mt-2 tracking-widest">Fresh Items</p>
+                    </div>
+                    <div class="bg-blue-500/10 p-8 rounded-3xl text-center">
+                        <h4 class="text-4xl font-black text-blue-500">0%</h4>
+                        <p class="text-xs uppercase mt-2 tracking-widest">Preservatives</p>
+                    </div>
                 </div>
-                <p class="text-slate-400 mb-8 leading-relaxed">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
-                <button onclick="order('Paneer Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
             </div>
         </div>
+    </section>
 
-        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
-            <div class="h-80 image-placeholder relative">
-                <img src="chicken.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
-                    <i class="fa-solid fa-drumstick-bite text-6xl"></i>
-                </div>
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <h2 class="section-title text-red-500">Contact <span class="text-white">Store</span></h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 rounded-3xl text-center">
+                <i class="fa-solid fa-phone text-3xl text-red-500 mb-6"></i>
+                <h4 class="font-bold mb-2 uppercase">Call Us</h4>
+                <p class="text-slate-400">8806040158<br>7040250029</p>
             </div>
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-4xl font-bold uppercase italic">Chicken Salad</h3>
-                    <span class="text-red-500 font-bold border border-red-500/30 px-4 py-1 rounded-full text-sm">~269 CAL</span>
-                </div>
-                <p class="text-slate-400 mb-8 leading-relaxed">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
-                <button onclick="order('Chicken Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-red-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            <div class="glass-card p-10 rounded-3xl text-center">
+                <i class="fa-solid fa-location-dot text-3xl text-red-500 mb-6"></i>
+                <h4 class="font-bold mb-2 uppercase">Visit Us</h4>
+                <p class="text-slate-400">Lane 60, Gokhale Nagar,<br>Pune - 411016</p>
             </div>
-        </div>
-
-        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
-            <div class="h-80 image-placeholder relative">
-                <img src="protein.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
-                    <i class="fa-solid fa-dumbbell text-6xl"></i>
-                </div>
-            </div>
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-4xl font-bold uppercase italic">Protein Bowl</h3>
-                    <span class="text-purple-500 font-bold border border-purple-500/30 px-4 py-1 rounded-full text-sm">~356 CAL</span>
-                </div>
-                <p class="text-slate-400 mb-8 leading-relaxed">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper.</p>
-                <button onclick="order('Protein Bowl')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-purple-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            <div class="glass-card p-10 rounded-3xl text-center">
+                <i class="fa-solid fa-clock text-3xl text-red-500 mb-6"></i>
+                <h4 class="font-bold mb-2 uppercase">Open Hours</h4>
+                <p class="text-slate-400">Monday - Sunday<br>10:00 AM - 10:00 PM</p>
             </div>
         </div>
+    </section>
 
-    </main>
-
-    <footer class="mt-32 text-center border-t border-white/10 pt-20">
-        <p class="text-slate-500 uppercase tracking-[0.5em] mb-4">Located in Pune</p>
-        <p class="text-3xl font-bold mb-2">8806040158 | 7040250029</p>
-        <p class="text-slate-400 italic">Lane 60, Gokhale Nagar</p>
+    <footer class="mt-20 text-center py-10 opacity-50">
+        <p class="text-xs font-bold tracking-[0.8em] uppercase">Arogyam Salad • Eat Clean Stay Fit</p>
     </footer>
 
     <script>
