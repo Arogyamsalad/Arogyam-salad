@@ -1,91 +1,153 @@
 index.html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arogyam Salad</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Arogyam | Premium Health Kitchen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+        
+        body { font-family: 'Outfit', sans-serif; background-color: #0f172a; color: white; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #22c55e;
+            transform: translateY(-12px);
+        }
+
+        .premium-text {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(45deg, #1e293b, #334155);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero Animation */
+        .fade-in { animation: fadeIn 1.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
-<body>
+<body class="pb-20">
 
-    <h1 class="title">🥗 Arogyam Salad</h1>
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-3xl font-black italic tracking-widest text-green-500">AROGYAM</div>
+        <div class="hidden md:flex space-x-8 font-medium text-slate-400">
+            <a href="#" class="hover:text-white transition">Menu</a>
+            <a href="#" class="hover:text-white transition">About</a>
+            <a href="#" class="hover:text-white transition">Contact</a>
+        </div>
+    </nav>
 
-    <div class="container">
+    <section class="py-20 px-6 text-center fade-in">
+        <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+            EAT CLEAN <br> <span class="premium-text">LIVE BETTER</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-light">
+            Treat you and your loved one's with something healthy. 
+            Fresh ingredients, premium taste.
+        </p>
+    </section>
 
-        <div class="card">
-            <img src="images/veg.jpg" alt="Veg Salad">
-            <h2>Veg Salad</h2>
-            <p>Fresh & healthy veggies bowl</p>
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+            <div class="h-80 image-placeholder relative">
+                <img src="veg.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                    <i class="fa-solid fa-leaf text-6xl"></i>
+                </div>
+            </div>
+            <div class="p-10">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-4xl font-bold uppercase italic">Veg Salad</h3>
+                    <span class="text-green-500 font-bold border border-green-500/30 px-4 py-1 rounded-full text-sm">~168 CAL</span>
+                </div>
+                <p class="text-slate-400 mb-8 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
+                <button onclick="order('Veg Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-green-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="images/paneer.jpg" alt="Paneer Salad">
-            <h2>Paneer Protein Salad</h2>
-            <p>High protein paneer bowl</p>
+        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+            <div class="h-80 image-placeholder relative">
+                <img src="paneer.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                    <i class="fa-solid fa-cheese text-6xl"></i>
+                </div>
+            </div>
+            <div class="p-10">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-4xl font-bold uppercase italic">Paneer Salad</h3>
+                    <span class="text-blue-500 font-bold border border-blue-500/30 px-4 py-1 rounded-full text-sm">~443 CAL</span>
+                </div>
+                <p class="text-slate-400 mb-8 leading-relaxed">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
+                <button onclick="order('Paneer Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="images/chicken.jpg" alt="Chicken Salad">
-            <h2>Chicken Protein Bowl</h2>
-            <p>Loaded with protein & taste</p>
+        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+            <div class="h-80 image-placeholder relative">
+                <img src="chicken.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                    <i class="fa-solid fa-drumstick-bite text-6xl"></i>
+                </div>
+            </div>
+            <div class="p-10">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-4xl font-bold uppercase italic">Chicken Salad</h3>
+                    <span class="text-red-500 font-bold border border-red-500/30 px-4 py-1 rounded-full text-sm">~269 CAL</span>
+                </div>
+                <p class="text-slate-400 mb-8 leading-relaxed">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
+                <button onclick="order('Chicken Salad')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-red-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="images/protein.jpg" alt="High Protein Bowl">
-            <h2>High Protein Bowl</h2>
-            <p>Perfect for fitness lovers</p>
+        <div class="glass-card rounded-[2.5rem] overflow-hidden group">
+            <div class="h-80 image-placeholder relative">
+                <img src="protein.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 flex flex-col items-center justify-center opacity-20 group-hover:opacity-40 transition">
+                    <i class="fa-solid fa-dumbbell text-6xl"></i>
+                </div>
+            </div>
+            <div class="p-10">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-4xl font-bold uppercase italic">Protein Bowl</h3>
+                    <span class="text-purple-500 font-bold border border-purple-500/30 px-4 py-1 rounded-full text-sm">~356 CAL</span>
+                </div>
+                <p class="text-slate-400 mb-8 leading-relaxed">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper.</p>
+                <button onclick="order('Protein Bowl')" class="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-purple-500 hover:text-white transition-all duration-300 uppercase tracking-widest">Order Now</button>
+            </div>
         </div>
 
-    </div>
+    </main>
 
-</body> body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-    text-align: center;
-}
+    <footer class="mt-32 text-center border-t border-white/10 pt-20">
+        <p class="text-slate-500 uppercase tracking-[0.5em] mb-4">Located in Pune</p>
+        <p class="text-3xl font-bold mb-2">8806040158 | 7040250029</p>
+        <p class="text-slate-400 italic">Lane 60, Gokhale Nagar</p>
+    </footer>
 
-.title {
-    margin: 20px;
-    font-size: 32px;
-    color: #2e7d32;
-}
+    <script>
+        function order(item) {
+            const msg = encodeURIComponent(`Hello Arogyam! 🥗 I want to order: *${item}*. Please share the dressing options.`);
+            window.open(`https://wa.me/918806040158?text=${msg}`, '_blank');
+        }
+    </script>
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    width: 250px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h2 {
-    margin: 10px 0;
-    color: #333;
-}
-
-.card p {
-    padding-bottom: 15px;
-    color: #777;
-}
+</body>
 </html>
