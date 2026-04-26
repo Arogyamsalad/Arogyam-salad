@@ -4,7 +4,7 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arogyam Salad | About Our Premium Health Kitchen</title>
+    <title>Arogyam Salad | Premium Plans</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -20,24 +20,15 @@ index.html
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
         
-        .premium-card:hover {
-            border-color: #22c55e;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(34, 197, 94, 0.1);
+        .plan-box {
+            background: #f8fafc;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
         }
 
-        .premium-text {
-            background: linear-gradient(to right, #4ade80, #15803d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .image-placeholder {
-            background: linear-gradient(45deg, #e2e8f0, #cbd5e1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        .arogyam-green { color: #22c55e; }
 
         .section-title {
             font-size: 3rem;
@@ -47,159 +38,189 @@ index.html
             margin-bottom: 2rem;
             border-left: 8px solid #22c55e;
             padding-left: 1.5rem;
-            color: #1e293b;
         }
 
-        .arogyam-green {
-            color: #22c55e; /* Pure Bright Green for Arogyam */
-        }
-
-        /* Nav link hover state for light mode */
-        .nav-link { color: #64748b; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; tracking-widest; transition: color 0.3s; }
+        .nav-link { color: #64748b; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; transition: color 0.3s; }
         .nav-link:hover { color: #1e293b; }
 
-        /* Animation */
-        .fade-in { animation: fadeIn 1.5s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .image-placeholder {
+            background: linear-gradient(45deg, #e2e8f0, #cbd5e1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
 
     <nav class="p-6 sticky top-0 z-50 bg-white/90 backdrop-blur-sm flex justify-center items-center max-w-7xl mx-auto rounded-b-3xl border-b border-black/5 shadow-sm">
         <div class="flex space-x-12">
-            <a href="#menu" class="nav-link">Menu</a>
-            <a href="#about" class="nav-link">About</a>
+            <a href="#menu" class="nav-link">Subscription Plans</a>
+            <a href="#about" class="nav-link">About Us</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <section id="menu" class="max-w-7xl mx-auto px-6 py-24 fade-in">
-        <h2 class="section-title">Explore Our <span class="arogyam-green">Signature Menu</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div class="premium-card overflow-hidden group">
-                <div class="h-80 image-placeholder relative">
-                    <img src="veg.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-30 group-hover:opacity-50 transition">
-                        <i class="fa-solid fa-leaf text-6xl text-green-600"></i>
-                        <p class="mt-4 font-bold text-green-900">VEG SPECIAL</p>
-                    </div>
-                </div>
-                <div class="p-10">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-4xl font-bold uppercase italic text-green-900">Veg Salad</h3>
-                        <span class="text-green-600 font-bold border border-green-200 bg-green-50 px-4 py-1 rounded-full text-sm">~168 CAL</span>
-                    </div>
-                    <p class="text-slate-600 mb-8 leading-relaxed">Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper, Baby Corn.</p>
-                    <button onclick="order('Veg Salad')" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-green-600 transition-all duration-300 uppercase tracking-widest text-lg">Order Now</button>
-                </div>
-            </div>
-
-            <div class="premium-card overflow-hidden group">
-                <div class="h-80 image-placeholder relative">
-                    <img src="paneer.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-30 group-hover:opacity-50 transition">
-                        <i class="fa-solid fa-cheese text-6xl text-blue-600"></i>
-                        <p class="mt-4 font-bold text-blue-900">PANEER LOVE</p>
-                    </div>
-                </div>
-                <div class="p-10">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-4xl font-bold uppercase italic text-blue-900">Paneer Salad</h3>
-                        <span class="text-blue-600 font-bold border border-blue-200 bg-blue-50 px-4 py-1 rounded-full text-sm">~443 CAL</span>
-                    </div>
-                    <p class="text-slate-600 mb-8 leading-relaxed">Paneer (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
-                    <button onclick="order('Paneer Salad')" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-blue-600 transition-all duration-300 uppercase tracking-widest text-lg">Order Now</button>
-                </div>
-            </div>
-
-            <div class="premium-card overflow-hidden group">
-                <div class="h-80 image-placeholder relative">
-                    <img src="chicken.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-30 group-hover:opacity-50 transition">
-                        <i class="fa-solid fa-drumstick-bite text-6xl text-red-600"></i>
-                        <p class="mt-4 font-bold text-red-900">CHICKEN FEAST</p>
-                    </div>
-                </div>
-                <div class="p-10 text-center md:text-left">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-4xl font-bold uppercase italic text-red-900 mx-auto md:mx-0">Chicken Salad</h3>
-                        <span class="text-red-600 font-bold border border-red-200 bg-red-50 px-4 py-1 rounded-full text-sm hidden md:block">~269 CAL</span>
-                    </div>
-                    <p class="text-slate-600 mb-8 leading-relaxed mx-auto md:mx-0">Chicken (100g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Sprouts, Bell Paper.</p>
-                    <button onclick="order('Chicken Salad')" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-red-600 transition-all duration-300 uppercase tracking-widest text-lg">Order Now</button>
-                </div>
-            </div>
-
-            <div class="premium-card overflow-hidden group">
-                <div class="h-80 image-placeholder relative">
-                    <img src="protein.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-30 group-hover:opacity-50 transition">
-                        <i class="fa-solid fa-dumbbell text-6xl text-purple-600"></i>
-                        <p class="mt-4 font-bold text-purple-900">GYM BOWL</p>
-                    </div>
-                </div>
-                <div class="p-10 text-center md:text-left">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-4xl font-bold uppercase italic text-purple-900 mx-auto md:mx-0">Protein Bowl</h3>
-                        <span class="text-purple-600 font-bold border border-purple-200 bg-purple-50 px-4 py-1 rounded-full text-sm hidden md:block">~356 CAL</span>
-                    </div>
-                    <p class="text-slate-600 mb-8 leading-relaxed mx-auto md:mx-0">Chicken (200g), Lettuce, Purple Cabbage, Cucumber, Broccoli, Carrot, Mushroom, Bell Paper.</p>
-                    <button onclick="order('Protein Bowl')" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-purple-600 transition-all duration-300 uppercase tracking-widest text-lg">Order Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="max-w-7xl mx-auto px-6 py-32 border-t border-black/5 bg-white rounded-3xl my-20 shadow-inner">
-        <h2 class="section-title">Who is <span class="arogyam-green">Arogyam</span>?</h2>
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="section-title">Our Salad <span class="arogyam-green">Plans</span></h2>
         
-        <div class="grid md:grid-cols-5 gap-12 items-center">
-            <div class="md:col-span-3">
-                <p class="text-3xl text-slate-800 leading-relaxed font-light mb-8">
-                    At Arogyam Salad, we're not just serving a healthy meal; we're crafting a lifestyle change right here in Pune.
-                </p>
-                <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
-                    <p>Located in the heart of Gokhale Nagar, we pride ourselves on sourcing the freshest, premium-grade ingredients to fuel your fitness journey. We believe healthy eating shouldn't be boring, which is why every bowl is packed with vibrant flavor and nutritional value.</p>
-                    <p>Whether you're a gym enthusiast looking for that extra protein boost or health-conscious and striving for balance, we have the perfect bowl for you.</p>
+        <div class="grid grid-cols-1 gap-12">
+
+            <div class="premium-card overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto image-placeholder relative">
+                    <img src="veg.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover">
+                    <div class="absolute top-6 left-6 bg-green-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg">~168 CAL</div>
+                </div>
+                <div class="p-10 flex-1">
+                    <h3 class="text-4xl font-black italic text-slate-800 uppercase mb-2">Veg Salad</h3>
+                    <p class="text-slate-500 mb-8">Fresh broccoli, cucumber, chickpeas, sprouts, and baby corn with Yogurt dressing.</p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="plan-box border-green-200">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Daily</p>
+                            <p class="text-2xl font-black text-slate-800">₹99</p>
+                        </div>
+                        <div class="plan-box border-green-200 bg-green-50">
+                            <p class="text-[10px] uppercase font-bold text-green-600">Weekly</p>
+                            <p class="text-2xl font-black text-slate-800">₹495</p>
+                        </div>
+                        <div class="plan-box border-green-200">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Monthly</p>
+                            <p class="text-2xl font-black text-slate-800">₹1980</p>
+                        </div>
+                    </div>
+                    <button onclick="order('Veg Salad Plan')" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl hover:bg-green-600 transition-all uppercase tracking-widest">Select Plan</button>
                 </div>
             </div>
-            <div class="md:col-span-2 premium-card p-12 text-center bg-green-50 shadow-lg border-2 border-green-100 flex flex-col items-center justify-center">
-                <h4 class="text-6xl font-black italic tracking-tighter text-green-500 uppercase leading-none">Arogyam</h4>
+
+            <div class="premium-card overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto image-placeholder relative">
+                    <img src="paneer.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover">
+                    <div class="absolute top-6 left-6 bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg">~443 CAL</div>
+                </div>
+                <div class="p-10 flex-1">
+                    <h3 class="text-4xl font-black italic text-slate-800 uppercase mb-2">Paneer Salad</h3>
+                    <p class="text-slate-500 mb-8">Paneer (100g) mixed with fresh premium veggies and Mayo dressing.</p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Daily</p>
+                            <p class="text-2xl font-black text-slate-800">₹135</p>
+                        </div>
+                        <div class="plan-box bg-blue-50 border-blue-200">
+                            <p class="text-[10px] uppercase font-bold text-blue-600">Weekly</p>
+                            <p class="text-2xl font-black text-slate-800">₹675</p>
+                        </div>
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Monthly</p>
+                            <p class="text-2xl font-black text-slate-800">₹2700</p>
+                        </div>
+                    </div>
+                    <button onclick="order('Paneer Salad Plan')" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl hover:bg-blue-600 transition-all uppercase tracking-widest">Select Plan</button>
+                </div>
+            </div>
+
+            <div class="premium-card overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto image-placeholder relative">
+                    <img src="chicken.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover">
+                    <div class="absolute top-6 left-6 bg-red-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg">~269 CAL</div>
+                </div>
+                <div class="p-10 flex-1">
+                    <h3 class="text-4xl font-black italic text-slate-800 uppercase mb-2">Chicken Salad</h3>
+                    <p class="text-slate-500 mb-8">Grilled Chicken (100g) with fresh veggie mix and Garlic Yogurt dressing.</p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Daily</p>
+                            <p class="text-2xl font-black text-slate-800">₹149</p>
+                        </div>
+                        <div class="plan-box bg-red-50 border-red-200">
+                            <p class="text-[10px] uppercase font-bold text-red-600">Weekly</p>
+                            <p class="text-2xl font-black text-slate-800">₹745</p>
+                        </div>
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Monthly</p>
+                            <p class="text-2xl font-black text-slate-800">₹2980</p>
+                        </div>
+                    </div>
+                    <button onclick="order('Chicken Salad Plan')" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl hover:bg-red-600 transition-all uppercase tracking-widest">Select Plan</button>
+                </div>
+            </div>
+
+            <div class="premium-card overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto image-placeholder relative">
+                    <img src="protein.jpg" onerror="this.style.display='none'" class="w-full h-full object-cover">
+                    <div class="absolute top-6 left-6 bg-purple-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg">~356 CAL</div>
+                </div>
+                <div class="p-10 flex-1">
+                    <h3 class="text-4xl font-black italic text-slate-800 uppercase mb-2">High Protein Bowl</h3>
+                    <p class="text-slate-500 mb-8">Chicken/Paneer (200g) with mushroom and premium veggie mix.</p>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Daily</p>
+                            <p class="text-2xl font-black text-slate-800">₹180</p>
+                        </div>
+                        <div class="plan-box bg-purple-50 border-purple-200">
+                            <p class="text-[10px] uppercase font-bold text-purple-600">Weekly</p>
+                            <p class="text-2xl font-black text-slate-800">₹900</p>
+                        </div>
+                        <div class="plan-box">
+                            <p class="text-[10px] uppercase font-bold text-slate-400">Monthly</p>
+                            <p class="text-2xl font-black text-slate-800">₹3600</p>
+                        </div>
+                    </div>
+                    <button onclick="order('High Protein Plan')" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl hover:bg-purple-600 transition-all uppercase tracking-widest">Select Plan</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-32 bg-white rounded-[3rem] my-20 shadow-sm border border-black/5">
+        <h2 class="section-title">Who is <span class="arogyam-green">Arogyam</span>?</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-lg text-slate-600 leading-relaxed space-y-6">
+                <p class="text-2xl text-slate-800 font-light italic">Fueling your healthy lifestyle in the heart of Pune.</p>
+                <p>Located at Gokhale Nagar, we provide 100% fresh, preservative-free salads delivered daily. Whether it's for weight loss, fitness, or general well-being, our balanced nutrition bowls are designed to keep you on track.</p>
+                <div class="flex space-x-4">
+                    <div class="bg-green-100 p-4 rounded-2xl text-center flex-1">
+                        <p class="text-2xl font-black text-green-600">Fresh</p>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-2xl text-center flex-1">
+                        <p class="text-2xl font-black text-blue-600">Healthy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="premium-card p-12 text-center bg-green-50 flex flex-col items-center">
+                <h4 class="text-6xl font-black italic text-green-500 uppercase leading-none">Arogyam</h4>
                 <p class="text-[10px] text-green-900 tracking-[10px] font-light uppercase">Salad</p>
-                <p class="text-xs text-green-700 mt-6 uppercase tracking-widest">Est. Pune • Healthy Living</p>
+                <p class="mt-8 text-slate-400 uppercase tracking-widest text-xs font-bold">Eat Clean • Stay Fit</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="max-w-7xl mx-auto px-6 py-32 border-t border-black/5">
-        <h2 class="section-title">Contact Our <span class="arogyam-green">Pune Kitchen</span></h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="premium-card p-10 text-center">
-                <i class="fa-solid fa-phone text-3xl text-green-600 mb-6"></i>
-                <h4 class="font-bold mb-2 uppercase text-slate-900 tracking-widest">Call Us</h4>
-                <p class="text-slate-600">8806040158<br>7040250029</p>
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-24 text-center">
+        <h2 class="section-title inline-block">Contact <span class="arogyam-green">Us</span></h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="premium-card p-10">
+                <i class="fa-solid fa-phone text-3xl text-green-500 mb-4"></i>
+                <p class="font-bold text-slate-800">8806040158 / 7040250029</p>
             </div>
-            <div class="premium-card p-10 text-center">
-                <i class="fa-solid fa-location-dot text-3xl text-green-600 mb-6"></i>
-                <h4 class="font-bold mb-2 uppercase text-slate-900 tracking-widest">Visit Us</h4>
-                <p class="text-slate-600">Lane 60, Gokhale Nagar,<br>Pune - 411016</p>
+            <div class="premium-card p-10">
+                <i class="fa-solid fa-location-dot text-3xl text-green-500 mb-4"></i>
+                <p class="font-bold text-slate-800">Lane 60, Gokhale Nagar, Pune</p>
             </div>
-            <div class="premium-card p-10 text-center">
-                <i class="fa-solid fa-clock text-3xl text-green-600 mb-6"></i>
-                <h4 class="font-bold mb-2 uppercase text-slate-900 tracking-widest">Open Hours</h4>
-                <p class="text-slate-600">Daily<br>10:00 AM - 10:00 PM</p>
+            <div class="premium-card p-10">
+                <i class="fa-solid fa-clock text-3xl text-green-500 mb-4"></i>
+                <p class="font-bold text-slate-800">Daily: 10 AM - 10 PM</p>
             </div>
         </div>
     </section>
-
-    <footer class="mt-20 text-center py-10 opacity-60 border-t border-black/5">
-        <p class="text-xs font-bold tracking-[0.8em] uppercase text-slate-500">Eat Clean • Stay Fit • Live Better</p>
-    </footer>
 
     <script>
-        function order(item) {
-            const msg = encodeURIComponent(`Hello Arogyam Salad Pune! 🥗 I would like to order the *${item}*. Please share the dressing options.`);
+        function order(plan) {
+            const msg = encodeURIComponent(`Hello Arogyam Salad! 🥗 I'm interested in the *${plan}*. Please share the subscription details.`);
             window.open(`https://wa.me/918806040158?text=${msg}`, '_blank');
         }
     </script>
