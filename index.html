@@ -17,6 +17,7 @@ index.html
             border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            overflow: hidden;
         }
         
         .arogyam-green { color: #22c55e; }
@@ -48,6 +49,32 @@ index.html
             z-index: 1000;
             align-items: center;
             justify-content: center;
+        }
+
+        /* Image Overlay Effect */
+        .card-img-container {
+            height: 16rem;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-img-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+            transition: transform 0.6s ease;
+        }
+        .premium-card:hover .card-img-container img {
+            transform: scale(1.1);
+        }
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+            z-index: 1;
         }
     </style>
 </head>
@@ -101,10 +128,12 @@ index.html
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-            <div class="premium-card overflow-hidden group">
-                <div class="h-64 flex items-center justify-center bg-slate-100 relative">
-                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">60-90 KCAL</div>
-                    <span class="text-slate-300 font-black italic text-4xl uppercase opacity-20 text-center">Veg<br>Salad</span>
+            <div class="premium-card group">
+                <div class="card-img-container">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold z-20">60-90 KCAL</div>
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Veg Salad">
+                    <span class="relative z-10 text-white font-black italic text-4xl uppercase drop-shadow-md">Veg Salad</span>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-black italic uppercase mb-2">Veg Salad</h3>
@@ -118,10 +147,12 @@ index.html
                 </div>
             </div>
 
-            <div class="premium-card overflow-hidden group">
-                <div class="h-64 flex items-center justify-center bg-slate-100 relative">
-                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold text-center uppercase">320-390 KCAL | 23-25g PRO</div>
-                    <span class="text-slate-300 font-black italic text-4xl uppercase opacity-20 text-center">Paneer<br>Salad</span>
+            <div class="premium-card group">
+                <div class="card-img-container">
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold z-20">320-390 KCAL</div>
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Paneer Salad">
+                    <span class="relative z-10 text-white font-black italic text-4xl uppercase drop-shadow-md text-center">Paneer Salad</span>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-black italic uppercase mb-2 text-blue-900">Balance Protein Paneer Salad</h3>
@@ -135,10 +166,12 @@ index.html
                 </div>
             </div>
 
-            <div class="premium-card overflow-hidden group">
-                <div class="h-64 flex items-center justify-center bg-slate-100 relative">
-                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold text-center uppercase">225-255 KCAL | 34-37g PRO</div>
-                    <span class="text-slate-300 font-black italic text-4xl uppercase opacity-20 text-center">Chicken<br>Salad</span>
+            <div class="premium-card group">
+                <div class="card-img-container">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold z-20">225-255 KCAL</div>
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1512852939750-1305098529bf?auto=format&fit=crop&w=800&q=80" alt="Chicken Salad">
+                    <span class="relative z-10 text-white font-black italic text-4xl uppercase drop-shadow-md text-center">Chicken Salad</span>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-black italic uppercase mb-2 text-red-900">Balance Protein Chicken Salad</h3>
@@ -152,10 +185,12 @@ index.html
                 </div>
             </div>
 
-            <div class="premium-card overflow-hidden group">
-                <div class="h-64 flex items-center justify-center bg-slate-100 relative">
-                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold text-center uppercase">356 KCAL | 65g PRO</div>
-                    <span class="text-slate-300 font-black italic text-4xl uppercase opacity-20 text-center">High Protein<br>Bowl</span>
+            <div class="premium-card group">
+                <div class="card-img-container">
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold z-20">356 KCAL | 65g PRO</div>
+                    <div class="overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?auto=format&fit=crop&w=800&q=80" alt="High Protein Bowl">
+                    <span class="relative z-10 text-white font-black italic text-4xl uppercase drop-shadow-md text-center">High Protein Bowl</span>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-black italic uppercase mb-2 text-purple-900">High Protein Bowl</h3>
@@ -172,7 +207,7 @@ index.html
         </div>
     </section>
 
-    <section id="about" class="max-w-7xl mx-auto px-6 py-24 bg-white rounded-[3rem] my-20 shadow-sm border border-black/5">
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24 bg-white rounded-[3rem] my-20 shadow-sm border border-black/5 overflow-hidden">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="section-title">Who is <span class="arogyam-green">Arogyam</span>?</h2>
@@ -184,9 +219,12 @@ index.html
                     </div>
                 </div>
             </div>
-            <div class="premium-card p-12 text-center bg-green-50 flex flex-col items-center border-none">
-                <h4 class="text-6xl font-black italic text-green-500 uppercase leading-none">Arogyam</h4>
-                <p class="text-[10px] text-green-900 tracking-[10px] font-light uppercase">Salad</p>
+            <div class="relative rounded-[2.5rem] overflow-hidden h-80 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Healthy Lifestyle">
+                <div class="absolute inset-0 bg-green-600/20 flex flex-col items-center justify-center">
+                    <h4 class="text-5xl font-black italic text-white uppercase leading-none drop-shadow-lg">Arogyam</h4>
+                    <p class="text-[8px] text-white tracking-[10px] font-light uppercase">Salad Delivery</p>
+                </div>
             </div>
         </div>
     </section>
